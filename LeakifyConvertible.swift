@@ -7,7 +7,7 @@
 
 public protocol LeakifyConvertible: class {}
 
-extension LeakifyConvertible {
+public extension LeakifyConvertible {
     /// Helper for getting class reference of object
     ///
     /// - Parameters:
