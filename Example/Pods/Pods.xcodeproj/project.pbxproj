@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		24FD8AFEA22D426CEC63CFCDB11AD415 /* Pods-Leakify_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD97CF08B609EA5AB30166D7B1DECAE8 /* Pods-Leakify_Example-dummy.m */; };
 		3D4E62AC411185762631C72DA8EDCBB9 /* Pods-Leakify_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3862B60EB074959CFEB4191F9482470 /* Pods-Leakify_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AE8AEBA23318FFC00646FDD /* LeakifyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8AEB923318FFC00646FDD /* LeakifyConvertible.swift */; };
+		4AE8AEBC2331907F00646FDD /* weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8AEBB2331907F00646FDD /* weak.swift */; };
 		7316A83A4E729318CD58BEACEF67286F /* Pods-Leakify_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91103D8050624F733BA8197B1E279B /* Pods-Leakify_Tests-dummy.m */; };
 		7329E2A5CAE07821367E43F380768ABB /* Leakify-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E193F7314DA1DA9CBD31E4108DB709F4 /* Leakify-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		856993A3CCBE0DDCA1E4DE7FDE3CC590 /* Leakify-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BAF7D1FD79DFB18F965649955AD998 /* Leakify-dummy.m */; };
 		85A3B217E14ECB31AF5FFA53522634C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		8C90E7BE84CE127197DA9BB669FB51B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B42A67CB6CCC49D51BDE53C6DCE3CD4D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005F86FAA1A7D9CBFD2820539C1F1D3 /* Source.swift */; };
+		B42A67CB6CCC49D51BDE53C6DCE3CD4D /* unown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005F86FAA1A7D9CBFD2820539C1F1D3 /* unown.swift */; };
 		C4865D93B23338CABD0D8D866BCDFCF5 /* Pods-Leakify_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 906EE7916D093BE29DF9468ED25C99B4 /* Pods-Leakify_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E483A849A8AE6DCCED8E442EE50E0A4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -46,13 +48,15 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3C7BD05E5682066072405481ABE72C71 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		40DF0FAEAF6EDC3CACD0BF0D1A3E3C03 /* Pods-Leakify_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Leakify_Example-Info.plist"; sourceTree = "<group>"; };
+		4AE8AEB923318FFC00646FDD /* LeakifyConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakifyConvertible.swift; sourceTree = "<group>"; };
+		4AE8AEBB2331907F00646FDD /* weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weak.swift; sourceTree = "<group>"; };
 		63A11699C6CEA4072CB685419EEBDFD3 /* Pods-Leakify_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Leakify_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6791656EDE6D546417D26AEB23BB07EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6AC675F5E3AE12D7F0D845CAECAE9F4A /* Pods-Leakify_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Leakify_Tests-Info.plist"; sourceTree = "<group>"; };
 		6C8E589C90815B81A48542CA6657432F /* Pods-Leakify_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Leakify_Example.modulemap"; sourceTree = "<group>"; };
 		714C957675FEB71AC071FA7139289587 /* Pods-Leakify_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Leakify_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8FC4034CDED1C9B240871B6DF3BF9749 /* Pods-Leakify_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Leakify_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9005F86FAA1A7D9CBFD2820539C1F1D3 /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Leakify/Classes/Source.swift; sourceTree = "<group>"; };
+		9005F86FAA1A7D9CBFD2820539C1F1D3 /* unown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = unown.swift; path = Leakify/Classes/unown.swift; sourceTree = "<group>"; };
 		906EE7916D093BE29DF9468ED25C99B4 /* Pods-Leakify_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Leakify_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9B91103D8050624F733BA8197B1E279B /* Pods-Leakify_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Leakify_Tests-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -112,7 +116,9 @@
 		26CB8B16BEADBB87326AA574AED94902 /* Leakify */ = {
 			isa = PBXGroup;
 			children = (
-				9005F86FAA1A7D9CBFD2820539C1F1D3 /* Source.swift */,
+				4AE8AEBB2331907F00646FDD /* weak.swift */,
+				4AE8AEB923318FFC00646FDD /* LeakifyConvertible.swift */,
+				9005F86FAA1A7D9CBFD2820539C1F1D3 /* unown.swift */,
 				24E5E587F47DEE33C7D14385B8460B8A /* Pod */,
 				5BB64D43FEA062ED94B0F43F13728F77 /* Support Files */,
 			);
@@ -365,7 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				856993A3CCBE0DDCA1E4DE7FDE3CC590 /* Leakify-dummy.m in Sources */,
-				B42A67CB6CCC49D51BDE53C6DCE3CD4D /* Source.swift in Sources */,
+				4AE8AEBC2331907F00646FDD /* weak.swift in Sources */,
+				4AE8AEBA23318FFC00646FDD /* LeakifyConvertible.swift in Sources */,
+				B42A67CB6CCC49D51BDE53C6DCE3CD4D /* unown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 [![Platform](https://img.shields.io/cocoapods/p/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 
-In Swift we have to avoid Strong Reference Cycles Between Class Instances.
-Often strong reference cycle occurs because closures, like classes, are reference types. When you assign a closure to a property, you are assigning a reference to that closure. 
+Tired of writing `[unowned/weak self] closures on every callback function?
+You might conside using passing method as a parameter with little help from Leakify.
 Usually we encourage sytuation like this
 
 ```Swift
