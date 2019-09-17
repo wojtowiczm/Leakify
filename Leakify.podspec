@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   In Swift we have to avoid Strong Reference Cycles Between Class Instances.
-  Often strong reference cycle occurs because closures, like classes, are reference types. When you assign a closure to a property, you are assigning a reference to that closure.
+  Often strong reference cycle occurs because closures, like classes, are reference types. When you assign a closure to a property, you are assigning a reference to that closure. 
                        DESC
 
   s.homepage         = 'https://github.com/wojtowiczm/Leakify'
