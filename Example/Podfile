@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Leakify_Example' do
+  pod 'Leakify', :path => '../'
+
+  target 'Leakify_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
