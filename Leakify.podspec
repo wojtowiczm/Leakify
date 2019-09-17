@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Leakify'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Bunch of higher order functions for better memory-safe syntax'
 
   s.description      = <<-DESC
@@ -16,6 +16,6 @@ DESC
   s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Leakify/Classes/**/*'
+  s.source_files = 'Leakify/Source/**/*'
   
 end

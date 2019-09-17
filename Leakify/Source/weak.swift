@@ -26,9 +26,9 @@ public func weak<T: AnyObject, U, V>(_ instance: T, _ classFunction: @escaping (
 ///   - classFunction: `(T) -> () -> Void`- Class reference to method whitch will be executed
 /// - Returns: `() -> Void` funcion with weak reference
 public func weak<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) -> () -> Void) -> () -> Void? {
-    return { [weak instance] args in
+    return { [weak instance] in
         guard let instance = instance else { return nil }
         let instanceFunction = classFunction(instance)
-        return instanceFunction(args)
+        return instanceFunction()
     }
 }
