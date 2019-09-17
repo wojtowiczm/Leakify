@@ -1,0 +1,16 @@
+PODS:
+  - Leakify (0.1.0)
+
+DEPENDENCIES:
+  - Leakify (from `../`)
+
+EXTERNAL SOURCES:
+  Leakify:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Leakify: 6bcb6e6ffd0f1990088c1fe5150f70d1a6c71803
+
+PODFILE CHECKSUM: d9b61ef00f2176cd93742f5859889af40a4c2d68
+
+COCOAPODS: 1.7.2

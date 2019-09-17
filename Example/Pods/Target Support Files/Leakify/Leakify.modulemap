@@ -1,0 +1,6 @@
+framework module Leakify {
+  umbrella header "Leakify-umbrella.h"
+
+  export *
+  module * { export * }
+}

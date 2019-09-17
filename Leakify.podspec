@@ -9,16 +9,11 @@
 Pod::Spec.new do |s|
   s.name             = 'Leakify'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Leakify.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Bunch of higher order functions for better memory-safe syntax'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  In Swift we have to avoid Strong Reference Cycles Between Class Instances.
+  Often strong reference cycle occurs because closures, like classes, are reference types. When you assign a closure to a property, you are assigning a reference to that closure.
                        DESC
 
   s.homepage         = 'https://github.com/wojtowiczm/Leakify'

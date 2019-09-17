@@ -1,0 +1,22 @@
+{
+  "name": "Leakify",
+  "version": "0.1.0",
+  "summary": "A short description of Leakify.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wojtowiczm/Leakify",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wojtowiczm": "michal.wojtowicz@kissdigital.com"
+  },
+  "source": {
+    "git": "https://github.com/wojtowiczm/Leakify.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Leakify/Classes/**/*"
+}

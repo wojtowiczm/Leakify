@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21949C67D4F4E8DA693F8E2B /* Leakify.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Leakify.podspec; path = ../Leakify.podspec; sourceTree = "<group>"; };
+		21949C67D4F4E8DA693F8E2B /* Leakify.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Leakify.podspec; path = ../Leakify.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3AE0DEE949E035854E1769A5 /* Pods-Leakify_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Tests.release.xcconfig"; path = "Target Support Files/Pods-Leakify_Tests/Pods-Leakify_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Leakify_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leakify_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,10 +42,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		733674C587A0519C3AA573ED /* Pods_Leakify_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leakify_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66913D0816FBF53C4EE88E /* Pods-Leakify_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Example.release.xcconfig"; path = "Target Support Files/Pods-Leakify_Example/Pods-Leakify_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A050FA9716245DE670025DFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A050FA9716245DE670025DFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B678276755B1C8F8B7F238F7 /* Pods_Leakify_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leakify_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3DB285F7EA1B74B56B7E6E /* Pods-Leakify_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Example.debug.xcconfig"; path = "Target Support Files/Pods-Leakify_Example/Pods-Leakify_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F23D9B81832797CE8A91C75D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F23D9B81832797CE8A91C75D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F778602D1926F19C158AD69C /* Pods-Leakify_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Leakify_Tests/Pods-Leakify_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				F778602D1926F19C158AD69C /* Pods-Leakify_Tests.debug.xcconfig */,
 				3AE0DEE949E035854E1769A5 /* Pods-Leakify_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
