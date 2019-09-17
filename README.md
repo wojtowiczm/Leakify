@@ -1,12 +1,12 @@
 # Leakify
 
-[![CI Status](https://img.shields.io/travis/wojtowiczm/Leakify.svg?style=flat)](https://travis-ci.org/wojtowiczm/Leakify)
 [![Version](https://img.shields.io/cocoapods/v/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 [![License](https://img.shields.io/cocoapods/l/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 [![Platform](https://img.shields.io/cocoapods/p/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 
 Tired of writing `[unowned/weak self] closures on every callback function?
 You might conside using passing method as a parameter with little help from Leakify.
+
 Usually we encourage sytuation like this
 
 ```Swift
@@ -40,7 +40,7 @@ We can import Leakify to our project and use on of it's higher order helper fuct
 ```Swift
 
     func foo() {
-        service.bar(then: unown(self, T(self).handleResponse)
+        service.bar(then: unown(self, self.lk.handleResponse)
     }
 ```
 }
