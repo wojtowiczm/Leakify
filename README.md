@@ -1,5 +1,6 @@
 # Leakify
 
+## Functional way to prevent memory leaks
 [![Version](https://img.shields.io/cocoapods/v/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 [![License](https://img.shields.io/cocoapods/l/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 [![Platform](https://img.shields.io/cocoapods/p/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
