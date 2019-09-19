@@ -1,0 +1,6 @@
+framework module SpecLeaks {
+  umbrella header "SpecLeaks-umbrella.h"
+
+  export *
+  module * { export * }
+}
