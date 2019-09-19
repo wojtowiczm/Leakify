@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Leakify.svg?style=flat)](https://cocoapods.org/pods/Leakify)
 
 Tired of writing `[unowned/weak self] closures on every callback function?
-You might conside using passing method as a parameter with little help from Leakify.
+You might consider using passing method as a parameter with little help from Leakify.
 
 Usually we encourage sytuation like this
 
@@ -33,10 +33,10 @@ Woudn't be great if we just pass function as a parameter?
         service.bar(then: handleResponse)
     }
 ```
-Yeah, but there is one big con of that aproach. We ended up with nice Stron reference cycle between service and Foo instance.
+Yeah, but there is one big con of that approach. We ended up with nice Strong reference cycle between service and Foo instance.
 What can we do now?
 
-We can import Leakify to our project and use on of it's higher order helper fuctions for avoiding strong reference cycles
+We can import Leakify to our project and use one of it's higher-order fuctions for avoiding strong reference cycles
 
 ```Swift
 
