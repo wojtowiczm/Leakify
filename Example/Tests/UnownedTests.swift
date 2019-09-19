@@ -23,13 +23,25 @@ class UnownedMethodsTests: QuickSpec {
         describe("ObjectWithUnownedUsage") {
             describe("unwonedWithArgsTest") {
                 it("must not leak") {
-                    let someObject = LeakTest(constructor: ObjectWithUnownedUsage.init)
+                    let unownedMethodsProvider = LeakTest(constructor: ObjectWithUnownedMethods.init)
                     
-                    let leakingMethodIsCalled: (ObjectWithUnownedUsage) -> ()  = {
+                    let leakingMethodIsCalled: (ObjectWithUnownedMethods) -> ()  = {
                         $0.unownedWithArgsTest()
                     }
                     
-                    expect(someObject).toNot(leakWhen(leakingMethodIsCalled))
+                    expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))
+                }
+            }
+            
+            describe("unwonedWithoutArgsTest") {
+                it("must not leak") {
+                    let unownedMethodsProvider = LeakTest(constructor: ObjectWithUnownedMethods.init)
+                    
+                    let leakingMethodIsCalled: (ObjectWithUnownedMethods) -> ()  = {
+                        $0.unownedWithoutArgTest()
+                    }
+                    
+                    expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))
                 }
             }
         }
