@@ -21,7 +21,6 @@ class BaseMock {
     }
 }
 
-
 class LeakingService {
     
     var state: Bool = true

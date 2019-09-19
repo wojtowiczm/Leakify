@@ -4,7 +4,7 @@ import SpecLeaks
 import Quick
 import Nimble
 
-class ObjectWithUnownedUsage: BaseMock {
+class ObjectWithUnownedMethods: BaseMock {
     
     func unownedWithoutArgTest() {
         service.methodWithoutArg(then: unown(self, self.lk.objectMethodWithoutArg))
@@ -15,7 +15,7 @@ class ObjectWithUnownedUsage: BaseMock {
     }
     
 }
-extension ObjectWithUnownedUsage: LeakifyConvertible {}
+extension ObjectWithUnownedMethods: LeakifyConvertible {}
 
 class UnownedMethodsTests: QuickSpec {
     
@@ -23,12 +23,10 @@ class UnownedMethodsTests: QuickSpec {
         describe("ObjectWithUnownedUsage") {
             describe("unwonedWithArgsTest") {
                 it("must not leak") {
-                    let someObject = LeakTest {
-                        return ObjectWithUnownedUsage()
-                    }
+                    let someObject = LeakTest(constructor: ObjectWithUnownedUsage.init)
                     
-                    let leakingMethodIsCalled: (ObjectWithUnownedUsage) -> ()  = {obj in
-                        obj.unownedWithArgsTest()
+                    let leakingMethodIsCalled: (ObjectWithUnownedUsage) -> ()  = {
+                        $0.unownedWithArgsTest()
                     }
                     
                     expect(someObject).toNot(leakWhen(leakingMethodIsCalled))

@@ -13,20 +13,19 @@ class LeakedObject: BaseMock {
     }
 }
 
-class LeakingObjectTests: QuickSpec {
+class LeakedObjectTests: QuickSpec {
+    
     override func spec() {
         describe("LeakedObject") {
             describe("leakingTest") {
                 it("must leak"){
-                    let someObject = LeakTest {
-                        return LeakedObject()
-                    }
+                    let leakedObject = LeakTest(constructor: LeakedObject.init)
                     
                     let leakingMethodIsCalled: (LeakedObject) -> ()  = {obj in
                         obj.leakingTest()
                     }
                     
-                    expect(someObject).to(leakWhen(leakingMethodIsCalled))
+                    expect(leakedObject).to(leakWhen(leakingMethodIsCalled))
                 }
             }
         }
