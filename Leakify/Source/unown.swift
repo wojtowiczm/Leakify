@@ -22,6 +22,19 @@ public func unown<T: AnyObject, U, V>(_ instance: T, _ classFunction: @escaping 
 ///
 /// - Parameters:
 ///   - instance: `T` - Object of whitch reference will unowned
+///   - classFunction: `(T) -> (U) -> Void`- Class reference to method whitch will be executed
+/// - Returns: `(U) -> Void` funcion with unowned reference
+public func unown<T: AnyObject, U>(_ instance: T, _ classFunction: @escaping (T) -> (U) -> Void) -> (U) -> Void {
+    return { [unowned instance] args in
+        let instanceFunction = classFunction(instance)
+        return instanceFunction(args)
+    }
+}
+
+/// Higher-order function making unowned reference on object when calling his method
+///
+/// - Parameters:
+///   - instance: `T` - Object of whitch reference will unowned
 ///   - classFunction: `(T) -> () -> Void`- Class reference to method whitch will be executed
 /// - Returns: `() -> Void` funcion with unowned reference
 public func unown<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) -> () -> Void) -> () -> Void {
@@ -30,5 +43,3 @@ public func unown<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) ->
         return instanceFunction()
     }
 }
-
-

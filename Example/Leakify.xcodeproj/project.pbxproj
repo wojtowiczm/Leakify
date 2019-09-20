@@ -12,7 +12,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* LeakedObjectswift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* LeakedObjectswift */; };
+		607FACEC1AFB9204008FA782 /* LeakedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* LeakedObject.swift */; };
 		88C991935C0289033E15AD13 /* Pods_Leakify_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733674C587A0519C3AA573ED /* Pods_Leakify_Example.framework */; };
 		FF3984440ACB904C112D75C7 /* Pods_Leakify_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B678276755B1C8F8B7F238F7 /* Pods_Leakify_Tests.framework */; };
 		FFF239E92333E73C004D4D4D /* UnownedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF239E52333E712004D4D4D /* UnownedTests.swift */; };
@@ -41,7 +41,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Leakify_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Leakify_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* LeakedObjectswift */ = {isa = PBXFileReference; lastKnownFileType = text; path = LeakedObjectswift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* LeakedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakedObject.swift; sourceTree = "<group>"; };
 		733674C587A0519C3AA573ED /* Pods_Leakify_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leakify_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66913D0816FBF53C4EE88E /* Pods-Leakify_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Example.release.xcconfig"; path = "Target Support Files/Pods-Leakify_Example/Pods-Leakify_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A050FA9716245DE670025DFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* LeakedObjectswift */,
+				607FACEB1AFB9204008FA782 /* LeakedObject.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				FFF239E52333E712004D4D4D /* UnownedTests.swift */,
 				FFF239E72333E72A004D4D4D /* Mocks.swift */,
@@ -370,7 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF239E92333E73C004D4D4D /* UnownedTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* LeakedObjectswift in Sources */,
+				607FACEC1AFB9204008FA782 /* LeakedObject.swift in Sources */,
 				FFF239EA2333E73F004D4D4D /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

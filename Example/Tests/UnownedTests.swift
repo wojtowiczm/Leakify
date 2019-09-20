@@ -14,6 +14,10 @@ class ObjectWithUnownedMethods: BaseMock {
         service.methodWithArg(then: unown(self, self.lk.objectMethodWithArg))
     }
     
+    func unownedWithArgsAndReturnTest() {
+        service.methodWithArgAndReturn(then: unown(self, self.lk.objectMethodWithArgAndReturn))
+    }
+    
 }
 extension ObjectWithUnownedMethods: LeakifyConvertible {}
 
@@ -39,6 +43,18 @@ class UnownedMethodsTests: QuickSpec {
                     
                     let leakingMethodIsCalled: (ObjectWithUnownedMethods) -> ()  = {
                         $0.unownedWithoutArgTest()
+                    }
+                    
+                    expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))
+                }
+            }
+            
+            describe("unwonedWithArgsAndReturnTest") {
+                it("must not leak") {
+                    let unownedMethodsProvider = LeakTest(constructor: ObjectWithUnownedMethods.init)
+                    
+                    let leakingMethodIsCalled: (ObjectWithUnownedMethods) -> ()  = {
+                        $0.unownedWithArgsAndReturnTest()
                     }
                     
                     expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))

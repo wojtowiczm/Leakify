@@ -19,6 +19,10 @@ class BaseMock {
     func objectMethodWithoutArg(_ arg: Bool) {
         state.toggle()
     }
+    
+    func objectMethodWithArgAndReturn(_ arg: Bool) -> Bool {
+        return !arg
+    }
 }
 
 class LeakingService {
@@ -31,5 +35,11 @@ class LeakingService {
     
     func methodWithoutArg(then completion: @escaping (Bool) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { completion(!self.state)}
+    }
+    
+    func methodWithArgAndReturn(then completion: @escaping (Bool) -> Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.state = completion(!self.state)
+        }
     }
 }

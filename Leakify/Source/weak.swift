@@ -23,6 +23,20 @@ public func weak<T: AnyObject, U, V>(_ instance: T, _ classFunction: @escaping (
 ///
 /// - Parameters:
 ///   - instance: `T` - Object of whitch reference will unowned
+///   - classFunction: `(T) -> (U) -> Void`- Class reference to method whitch will be executed
+/// - Returns: `(U) -> Void` funcion with unowned reference
+public func weak<T: AnyObject, U>(_ instance: T, _ classFunction: @escaping (T) -> (U) -> Void) -> (U) -> Void {
+    return { [weak instance] args in
+        guard let instance = instance else { return }
+        let instanceFunction = classFunction(instance)
+        return instanceFunction(args)
+    }
+}
+
+/// Higher-order function making weak reference on object when calling his method
+///
+/// - Parameters:
+///   - instance: `T` - Object of whitch reference will unowned
 ///   - classFunction: `(T) -> () -> Void`- Class reference to method whitch will be executed
 /// - Returns: `() -> Void` funcion with weak reference
 public func weak<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) -> () -> Void) -> () -> Void? {
@@ -32,3 +46,4 @@ public func weak<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) -> 
         return instanceFunction()
     }
 }
+
