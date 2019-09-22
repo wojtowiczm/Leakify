@@ -10,8 +10,8 @@ public protocol LeakifyConvertible: class {}
 public extension LeakifyConvertible {
     /// Helper for getting class reference of object
     ///
-    /// - Parameters:
-    ///   - object: `O` - Object of whitch reference will be returned
+    /// - Returns:
+    ///   - Self.Type: reference of object type
     var lk: Self.Type {
         return type(of: self)
     }
