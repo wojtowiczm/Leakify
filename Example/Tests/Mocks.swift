@@ -19,13 +19,10 @@ class BaseMock {
     func objectMethodWithoutArg(_ arg: Bool) {
         state.toggle()
     }
-<<<<<<< HEAD
     
     func objectMethodWithArgAndReturn(_ arg: Bool) -> Bool {
         return !arg
     }
-=======
->>>>>>> tests
 }
 
 class LeakingService {

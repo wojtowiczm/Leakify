@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Leakify'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Bunch of higher order functions for better memory-safe syntax'
 
   s.description      = <<-DESC

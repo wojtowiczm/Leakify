@@ -7,20 +7,17 @@ import Nimble
 class ObjectWithUnownedMethods: BaseMock {
     
     func unownedWithoutArgTest() {
-        service.methodWithoutArg(then: unown(self, self.lk.objectMethodWithoutArg))
+        service.methodWithoutArg(then: unown(self, lf.objectMethodWithoutArg))
     }
     
     func unownedWithArgsTest() {
-        service.methodWithArg(then: unown(self, self.lk.objectMethodWithArg))
+        service.methodWithArg(then: unown(self, lf.objectMethodWithArg))
     }
     
-<<<<<<< HEAD
     func unownedWithArgsAndReturnTest() {
-        service.methodWithArgAndReturn(then: unown(self, self.lk.objectMethodWithArgAndReturn))
+        service.methodWithArgAndReturn(then: unown(self, lf.objectMethodWithArgAndReturn))
     }
     
-=======
->>>>>>> tests
 }
 extension ObjectWithUnownedMethods: LeakifyConvertible {}
 
@@ -51,8 +48,6 @@ class UnownedMethodsTests: QuickSpec {
                     expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))
                 }
             }
-<<<<<<< HEAD
-            
             describe("unwonedWithArgsAndReturnTest") {
                 it("must not leak") {
                     let unownedMethodsProvider = LeakTest(constructor: ObjectWithUnownedMethods.init)
@@ -64,8 +59,6 @@ class UnownedMethodsTests: QuickSpec {
                     expect(unownedMethodsProvider).toNot(leakWhen(leakingMethodIsCalled))
                 }
             }
-=======
->>>>>>> tests
         }
     }
 }
