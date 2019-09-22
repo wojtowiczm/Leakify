@@ -41,11 +41,14 @@ We can import Leakify to our project and use one of it's higher-order fuctions f
 ```Swift
 
     func foo() {
-        service.bar(then: unown(self, self.lk.handleResponse)
+        service.bar(then: unown(self, self.lk.handleResponse))
     }
 ```
-}
-
+If you wanna use handy shortcut `lf` to get class reference your object has to conform to `LeakifyConvertible`
+```Swift
+    extension Foo: LeakifyConvertible {}
+```
+You can add this requirement to your base or `NSObject` class.
 
 ## Installation
 
