@@ -12,7 +12,7 @@ public extension LeakifyConvertible {
     ///
     /// - Returns:
     ///   - Self.Type: reference of object type
-    var lf: Self.Type {
+    var lkf: Self.Type {
         return type(of: self)
     }
 }

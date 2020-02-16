@@ -5,45 +5,44 @@
 //  Created by Michał Wójtowicz on 18/09/2019.
 //
 
-/// Higher-order function making weak reference on object when calling his method
-///
-/// - Parameters:
-///   - instance: `T` - Object of whitch reference will unowned
-///   - classFunction: `(T) -> (U) -> V`- Class reference to method whitch will be executed
-/// - Returns: `(U) -> V` funcion with weak reference
-public func weak<T: AnyObject, U, V>(_ instance: T, _ classFunction: @escaping (T) -> (U) -> V) -> (U) -> V? {
-    return { [weak instance] args in
-        guard let instance = instance else { return nil }
-        let instanceFunction = classFunction(instance)
-        return instanceFunction(args)
+public extension LeakifyConvertible {
+    
+    /// Makes weak reference on object when calling his method
+    ///
+    /// - Parameters:
+    ///   - classFunction: `(T) -> (U) -> V`- reference to method will be executed
+    /// - Returns: `(U) -> V` funcion with weak reference
+    subscript <U, V>(weak classFunction: @escaping (Self) -> (U) -> V) -> (U) -> V? {
+        return { [weak self] args in
+            guard let self = self else { return nil }
+            let instanceFunction = classFunction(self)
+            return instanceFunction(args)
+        }
+    }
+    
+    /// Makes weak reference on object when calling his method
+    ///
+    /// - Parameters:
+    ///   - classFunction: `(T) -> (U) -> Void`- reference to method will be executed
+    /// - Returns: `(U) -> Void` funcion with weak reference
+    subscript <U>(weak classFunction: @escaping (Self) -> (U) -> Void) -> (U) -> Void {
+        return { [weak self] args in
+            guard let self = self else { return }
+            let instanceFunction = classFunction(self)
+            return instanceFunction(args)
+        }
+    }
+    
+    /// Makes weak reference on object when calling his method
+    ///
+    /// - Parameters:
+    ///   - classFunction: `(T) -> () -> Void`- reference to method will be executed
+    /// - Returns: `() -> Void` funcion with weak reference
+    subscript (weak classFunction: @escaping (Self) -> () -> Void) -> () -> Void {
+        return { [weak self] in
+            guard let self = self else { return }
+            let instanceFunction = classFunction(self)
+            return instanceFunction()
+        }
     }
 }
-
-/// Higher-order function making weak reference on object when calling his method
-///
-/// - Parameters:
-///   - instance: `T` - Object of whitch reference will unowned
-///   - classFunction: `(T) -> (U) -> Void`- Class reference to method whitch will be executed
-/// - Returns: `(U) -> Void` funcion with unowned reference
-public func weak<T: AnyObject, U>(_ instance: T, _ classFunction: @escaping (T) -> (U) -> Void) -> (U) -> Void {
-    return { [weak instance] args in
-        guard let instance = instance else { return }
-        let instanceFunction = classFunction(instance)
-        return instanceFunction(args)
-    }
-}
-
-/// Higher-order function making weak reference on object when calling his method
-///
-/// - Parameters:
-///   - instance: `T` - Object of whitch reference will unowned
-///   - classFunction: `(T) -> () -> Void`- Class reference to method whitch will be executed
-/// - Returns: `() -> Void` funcion with weak reference
-public func weak<T: AnyObject>(_ instance: T, _ classFunction: @escaping (T) -> () -> Void) -> () -> Void? {
-    return { [weak instance] in
-        guard let instance = instance else { return nil }
-        let instanceFunction = classFunction(instance)
-        return instanceFunction()
-    }
-}
-

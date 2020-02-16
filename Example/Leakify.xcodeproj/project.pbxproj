@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* LeakedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* LeakedObject.swift */; };
 		88C991935C0289033E15AD13 /* Pods_Leakify_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733674C587A0519C3AA573ED /* Pods_Leakify_Example.framework */; };
 		FF3984440ACB904C112D75C7 /* Pods_Leakify_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B678276755B1C8F8B7F238F7 /* Pods_Leakify_Tests.framework */; };
+		FFC0F7BE23F99FBC006325C3 /* WeakTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0F7BC23F99EF7006325C3 /* WeakTest.swift */; };
 		FFF239E92333E73C004D4D4D /* UnownedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF239E52333E712004D4D4D /* UnownedTests.swift */; };
 		FFF239EA2333E73F004D4D4D /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF239E72333E72A004D4D4D /* Mocks.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		DB3DB285F7EA1B74B56B7E6E /* Pods-Leakify_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Example.debug.xcconfig"; path = "Target Support Files/Pods-Leakify_Example/Pods-Leakify_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F23D9B81832797CE8A91C75D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F778602D1926F19C158AD69C /* Pods-Leakify_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leakify_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Leakify_Tests/Pods-Leakify_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFC0F7BC23F99EF7006325C3 /* WeakTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakTest.swift; sourceTree = "<group>"; };
 		FFF239E52333E712004D4D4D /* UnownedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedTests.swift; sourceTree = "<group>"; };
 		FFF239E72333E72A004D4D4D /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				FFF239E52333E712004D4D4D /* UnownedTests.swift */,
 				FFF239E72333E72A004D4D4D /* Mocks.swift */,
+				FFC0F7BC23F99EF7006325C3 /* WeakTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF239E92333E73C004D4D4D /* UnownedTests.swift in Sources */,
+				FFC0F7BE23F99FBC006325C3 /* WeakTest.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* LeakedObject.swift in Sources */,
 				FFF239EA2333E73F004D4D4D /* Mocks.swift in Sources */,
 			);
